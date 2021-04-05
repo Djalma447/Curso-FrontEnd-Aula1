@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display e Visibilidade</title>
+    <style>
+        p {
+            color: royalblue;
+        }
+
+        p.esp-1 {
+            display: block;
+        }
+
+        /* Certas Tags já tem o Display como Block, por exemplo, o 'p'
+        Block - Ocupa a linha inteira */
+        span {
+            display: block;
+        }
+
+        /* O Span não possui Display Block, por conta disso, ele não ocupa a linha inteira
+        e não faz quebra de linha */
+        div {
+            color: red;
+        }
+
+        p.exp-2 {
+            display: inline;
+            /* Este tipo de display retira o modo 'block' que já tem em certas tags */
+        }
+
+        p.exp-3 {
+            display: inline-block;
+            /* Este tipo de display retira o espaçamento horizontal, deixando o vertical intacto */
+        }
+
+        p.exp-4 {
+            display: none;
+            /* Este tipo de display anula a exibição do elemento na página */
+        }
+
+        .aparecer:hover p.exp-4{
+            display: block;
+            /* Hover - executa uma determinada função quando se aponta o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        Span
+    </span>
+    <!--Exemplo 1-->
+    <p class="exp-1">Texto 1</p>
+
+    <!--Exemplo 2-->
+    <div>
+        Texto abc
+        <p class="exp-2">Texto 2</p>
+        Texto abc
+    </div>
+
+    <!--Exemplo 3-->
+    <div>
+        tEXTO ABC
+        <p class="exp-3">Texto 3</p>
+        tEXTO ABC
+    </div>
+
+    <!--Exemplo 4-->
+    <div class="aparecer">
+        Aparecer
+        <p class="exp-4">Texto 4</p>
+    </div>
+</body>
+
+</html>
